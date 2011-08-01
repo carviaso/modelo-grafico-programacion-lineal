@@ -25,7 +25,10 @@ public class Proyecto_Final_IOView extends FrameView {
         super(app);
 
         initComponents();
-
+        
+        colas.Lienzo lienzo = new colas.Lienzo();
+        this.PanelDeDibujo.add(lienzo, java.awt.BorderLayout.CENTER); 
+  
         // status bar initialization - message timeout, idle icon and busy animation, etc
         ResourceMap resourceMap = getResourceMap();
         int messageTimeout = resourceMap.getInteger("StatusBar.messageTimeout");
@@ -101,6 +104,7 @@ public class Proyecto_Final_IOView extends FrameView {
     private void initComponents() {
 
         mainPanel = new javax.swing.JPanel();
+        PanelDeDibujo = new javax.swing.JPanel();
         menuBar = new javax.swing.JMenuBar();
         javax.swing.JMenu fileMenu = new javax.swing.JMenu();
         javax.swing.JMenuItem exitMenuItem = new javax.swing.JMenuItem();
@@ -113,17 +117,22 @@ public class Proyecto_Final_IOView extends FrameView {
         progressBar = new javax.swing.JProgressBar();
 
         mainPanel.setName("mainPanel"); // NOI18N
+        mainPanel.setLayout(new java.awt.BorderLayout());
 
-        javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
-        mainPanel.setLayout(mainPanelLayout);
-        mainPanelLayout.setHorizontalGroup(
-            mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        PanelDeDibujo.setName("panelDeDibujo");
+
+        javax.swing.GroupLayout PanelDeDibujoLayout = new javax.swing.GroupLayout(PanelDeDibujo);
+        PanelDeDibujo.setLayout(PanelDeDibujoLayout);
+        PanelDeDibujoLayout.setHorizontalGroup(
+            PanelDeDibujoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 646, Short.MAX_VALUE)
         );
-        mainPanelLayout.setVerticalGroup(
-            mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        PanelDeDibujoLayout.setVerticalGroup(
+            PanelDeDibujoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 255, Short.MAX_VALUE)
         );
+
+        mainPanel.add(PanelDeDibujo, java.awt.BorderLayout.CENTER);
 
         menuBar.setName("menuBar"); // NOI18N
 
@@ -190,6 +199,7 @@ public class Proyecto_Final_IOView extends FrameView {
     }// </editor-fold>//GEN-END:initComponents
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel PanelDeDibujo;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JMenuBar menuBar;
     private javax.swing.JProgressBar progressBar;
