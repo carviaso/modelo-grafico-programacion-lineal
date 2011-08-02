@@ -138,6 +138,56 @@ public class Lienzo extends java.awt.Canvas {
                 Configuracion.CAJAS[i][2],
                 Configuracion.CAJAS[i][3]);
         }
+        
+        //Camino Desde Cajas hacia Bodegas
+        g2.setColor(Color.BLACK);
+        for(int i = 0; i < Configuracion.CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS.length; i++)
+        {
+             g2.draw(new Line2D.Double(
+                     Configuracion.CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS[i][0], 
+                     Configuracion.CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS[i][1], 
+                     Configuracion.CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS[i][2], 
+                     Configuracion.CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS[i][3]));
+        }
+        //Camino Principal
+        for(int i = 0; i < Configuracion.CAMINO_BODEGUEROS.length; i++)
+        {
+             g2.draw(new Line2D.Double(
+                     Configuracion.CAMINO_BODEGUEROS[i][0], 
+                     Configuracion.CAMINO_BODEGUEROS[i][1], 
+                     Configuracion.CAMINO_BODEGUEROS[i][2], 
+                     Configuracion.CAMINO_BODEGUEROS[i][3]));
+        }
+        
+        //Camino Final
+        for(int i = 0; i < Configuracion.CAMINO_FINAL_CAJAS.length; i++)
+        {
+             g2.draw(new Line2D.Double(
+                     Configuracion.CAMINO_FINAL_CAJAS[i][0], 
+                     Configuracion.CAMINO_FINAL_CAJAS[i][1], 
+                     Configuracion.CAMINO_FINAL_CAJAS[i][2], 
+                     Configuracion.CAMINO_FINAL_CAJAS[i][3]));
+        }
+        
+        //Dibuja a los Despachos
+        g2.setColor(Color.RED);
+        for(int i = 0; i < Configuracion.DESPACHOS.length; i++)
+        {
+            g2.fillRect(
+                Configuracion.DESPACHOS[i][0],
+                Configuracion.DESPACHOS[i][1],
+                Configuracion.DESPACHOS[i][2],
+                Configuracion.DESPACHOS[i][3]);
+        }
+        
+        g2.setColor(Color.ORANGE);
+        g2.setStroke(new BasicStroke(2));
+        g2.draw(new Rectangle2D.Double(
+                Configuracion.BODEGA[0],
+                Configuracion.BODEGA[1],
+                Configuracion.BODEGA[2],
+                Configuracion.BODEGA[3]
+                ));
     }
 
     @Override
