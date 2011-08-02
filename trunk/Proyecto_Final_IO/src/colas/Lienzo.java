@@ -66,8 +66,8 @@ public class Lienzo extends java.awt.Canvas {
                 Configuracion.HABITACION[3]
                 ));
         
+        //Dibuja a los Vendedores
         g2.setColor(Color.GREEN);
-        
         for(int i = 0; i < Configuracion.VENDEDORES.length; i++)
         {
             g2.fillRect(
@@ -96,6 +96,47 @@ public class Lienzo extends java.awt.Canvas {
                      Configuracion.CAMINO_FINAL_A_VENDEDORES[i][1], 
                      Configuracion.CAMINO_FINAL_A_VENDEDORES[i][2], 
                      Configuracion.CAMINO_FINAL_A_VENDEDORES[i][3]));
+        }
+        
+        //Dibujar camino hasta cajas
+        //Camino dese vendedores
+        g2.setColor(Color.BLUE);
+        for(int i = 0; i < Configuracion.CAMINO_DESDE_VENDEDORES_HASTA_CAJAS.length; i++)
+        {
+             g2.draw(new Line2D.Double(
+                     Configuracion.CAMINO_DESDE_VENDEDORES_HASTA_CAJAS[i][0], 
+                     Configuracion.CAMINO_DESDE_VENDEDORES_HASTA_CAJAS[i][1], 
+                     Configuracion.CAMINO_DESDE_VENDEDORES_HASTA_CAJAS[i][2], 
+                     Configuracion.CAMINO_DESDE_VENDEDORES_HASTA_CAJAS[i][3]));
+        }
+        //Camino principal
+        for(int i = 0; i < Configuracion.CAMINO_CAJAS.length; i++)
+        {
+             g2.draw(new Line2D.Double(
+                     Configuracion.CAMINO_CAJAS[i][0], 
+                     Configuracion.CAMINO_CAJAS[i][1], 
+                     Configuracion.CAMINO_CAJAS[i][2], 
+                     Configuracion.CAMINO_CAJAS[i][3]));
+        }
+        //Camino hacia Cajas
+        for(int i = 0; i < Configuracion.CAMINO_FINAL_A_CAJAS.length; i++)
+        {
+             g2.draw(new Line2D.Double(
+                     Configuracion.CAMINO_FINAL_A_CAJAS[i][0], 
+                     Configuracion.CAMINO_FINAL_A_CAJAS[i][1], 
+                     Configuracion.CAMINO_FINAL_A_CAJAS[i][2], 
+                     Configuracion.CAMINO_FINAL_A_CAJAS[i][3]));
+        }
+        
+        //Dibuja a los Cajeros
+        g2.setColor(new Color(128, 120, 86));
+        for(int i = 0; i < Configuracion.CAJAS.length; i++)
+        {
+            g2.fillRect(
+                Configuracion.CAJAS[i][0],
+                Configuracion.CAJAS[i][1],
+                Configuracion.CAJAS[i][2],
+                Configuracion.CAJAS[i][3]);
         }
     }
 
