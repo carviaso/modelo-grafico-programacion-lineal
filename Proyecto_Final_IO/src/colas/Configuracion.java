@@ -96,10 +96,56 @@ public class Configuracion {
     //Cajas
     public static int CAJAS[][] = {
         {300, 300, 20, 20},//Dibuja primer cajero (x,y,ancho, alto)
-        {300, 276, 20, 20},//Dibuja primer cajero (x,y,ancho, alto)
-        {300, 252, 20, 20},//Dibuja primer cajero (x,y,ancho, alto)
-        {300, 228, 20, 20},//Dibuja primer cajero (x,y,ancho, alto)
-        {300, 204, 20, 20},//Dibuja primer cajero (x,y,ancho, alto)
-        {300, 180, 20, 20}//Dibuja primer cajero (x,y,ancho, alto)
+        {300, 276, 20, 20},//Dibuja segundo cajero (x,y,ancho, alto)
+        {300, 252, 20, 20},//Dibuja tercero cajero (x,y,ancho, alto)
+        {300, 228, 20, 20},//Dibuja cuarto cajero (x,y,ancho, alto)
+        {300, 204, 20, 20},//Dibuja quinto cajero (x,y,ancho, alto)
+        {300, 180, 20, 20}//Dibuja sexto cajero (x,y,ancho, alto)
     };
+    
+    //Camino desde cajas hacia bodegueros
+    public static int CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS[][] = {
+        {320, 310, 400, 252},//Dibuja primera parte 
+        {320, 286, 400, 252},//Dibuja segunda parte 
+        {320, 262, 400, 252},//Dibuja tercera parte 
+        {320, 238, 400, 252},//Dibuja cuarta parte 
+        {320, 214, 400, 252},//Dibuja quinta parte 
+        {320, 190, 400, 252}//Dibuja sexta parte 
+    };
+    
+    //Camino desde cajas hacia bodegueros
+    public static int CAMINO_BODEGUEROS[][] = {
+        {400, 252, 410, 252},//Dibuja primera parte 
+        {410, 252, 410, 370},//Dibuja segunda parte
+        {410, 370, 430, 370},//Dibuja tercera parte 
+        {430, 370, 430, 180},//Dibuja cuarta parte 
+        {430, 180, 450, 180},//Dibuja quinta parte
+        {450, 180, 450, 370},//Dibuja sexta parte
+        {450, 370, 470, 370},//Dibuja sexta parte
+        {470, 370, 470, 150},//Dibuja sexta parte
+        {470, 150, 55, 150},//Dibuja sexta parte
+        {55, 150, 55, 58},//Dibuja sexta parte
+        {55, 58, 70, 58},//Dibuja sexta parte
+    };
+    
+    //Camino final de cajas
+    public static int CAMINO_FINAL_CAJAS[][] = {
+        {70, 58, 180, 20},//Dibuja primera parte 
+        {70, 58, 180, 44},//Dibuja segunda parte 
+        {70, 58, 180, 68},//Dibuja tercera parte 
+        {70, 58, 180, 92},//Dibuja cuarta parte 
+        {70, 58, 180, 116}//Dibuja quinta parte
+    };
+    
+    //Despachos de bodegueros
+    public static int DESPACHOS[][] = {
+        {180, 106, 20, 20},//Dibuja segundo cajero (x,y,ancho, alto)
+        {180, 82, 20, 20},//Dibuja tercero cajero (x,y,ancho, alto)
+        {180, 58, 20, 20},//Dibuja cuarto cajero (x,y,ancho, alto)
+        {180, 34, 20, 20},//Dibuja quinto cajero (x,y,ancho, alto)
+        {180, 10, 20, 20}//Dibuja sexto cajero (x,y,ancho, alto)
+    };
+    
+    //Bodega (contenedor) de pedidos
+    public static int BODEGA[] = {280, 12, 220, 130 };
 }
