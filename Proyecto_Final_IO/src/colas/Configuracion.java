@@ -148,4 +148,13 @@ public class Configuracion {
     
     //Bodega (contenedor) de pedidos
     public static int BODEGA[] = {280, 12, 220, 130 };
+    
+    //Camino de bodegueros a bodegas
+    public static int CAMINO_BODEGUEROS_A_BODEGAS[][] = {
+        {200, 20, 280, 30},//Dibuja primera parte 
+        {200, 44, 280, 54},//Dibuja segunda parte 
+        {200, 68, 280, 78},//Dibuja tercera parte 
+        {200, 92, 280, 102},//Dibuja cuarta parte 
+        {200, 116, 280, 126}//Dibuja quinta parte
+    };
 }
