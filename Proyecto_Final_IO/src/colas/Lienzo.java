@@ -8,6 +8,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.awt.geom.*;
 import javax.swing.*;
+import java.awt.image.BufferStrategy;
 
 /**
  *
@@ -194,7 +195,9 @@ public class Lienzo extends java.awt.Canvas {
     }
 
     public void sigueCamino() {
-        Graphics2D g2 = (Graphics2D) this.getGraphics();
+        createBufferStrategy(2);
+        BufferStrategy strategy = getBufferStrategy();
+        Graphics2D g2 = (Graphics2D) strategy.getDrawGraphics();
         g2.setColor(Color.RED);
         Rectangle2D rec = new Rectangle2D.Double(
                 Configuracion.CAMINO_BODEGUEROS[0][0],
@@ -248,6 +251,8 @@ public class Lienzo extends java.awt.Canvas {
                         y,
                         2, 2);
                 g2.fill(rec);
+                strategy.show();
+                
                 //Sale
                 if (x == x_final && y == y_final) {
                     break;
