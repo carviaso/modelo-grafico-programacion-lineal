@@ -218,7 +218,7 @@ public class Proyecto_Final_IOView extends FrameView {
     }//GEN-LAST:event_jMenuItem1MouseClicked
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        this.lienzo.sigueCamino();
+        this.lienzo.sigueCamino(colas.Configuracion.CAMINO_FINAL_A_VENDEDORES);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
