@@ -22,9 +22,7 @@ public class Lienzo extends java.awt.Canvas {
 
     }
 
-    @Override
-    public void paint(Graphics g) {
-        super.paint(g);
+    public void dibuja_lienzo(Graphics g) {
         Graphics2D g2 = (Graphics2D) g;
         // draw entire component white
         g.setColor(Color.white);
@@ -185,6 +183,12 @@ public class Lienzo extends java.awt.Canvas {
     }
 
     @Override
+    public void paint(Graphics g) {
+        super.paint(g);
+        dibuja_lienzo(g);
+    }
+
+    @Override
     public Dimension getPreferredSize() {
         return new Dimension(400, 400);
     }
@@ -194,22 +198,22 @@ public class Lienzo extends java.awt.Canvas {
         return getPreferredSize();
     }
 
-    public void sigueCamino() {
+    public void sigueCamino(int[][] camino) {
         createBufferStrategy(2);
         BufferStrategy strategy = getBufferStrategy();
         Graphics2D g2 = (Graphics2D) strategy.getDrawGraphics();
         g2.setColor(Color.RED);
         Rectangle2D rec = new Rectangle2D.Double(
-                Configuracion.CAMINO_BODEGUEROS[0][0],
-                Configuracion.CAMINO_BODEGUEROS[0][1],
+                camino[0][0],
+                camino[0][1],
                 2, 2);
-        g2.fill(rec);
-        for (int i = 0; i < Configuracion.CAMINO_BODEGUEROS.length; i++) {
-            int x = Configuracion.CAMINO_BODEGUEROS[i][0];
-            int y = Configuracion.CAMINO_BODEGUEROS[i][1];
+        //g2.fill(rec);
+        for (int i = 0; i < camino.length; i++) {
+            int x = camino[i][0]-2;
+            int y = camino[i][1]-2;
 
-            int x_final = Configuracion.CAMINO_BODEGUEROS[i][2];
-            int y_final = Configuracion.CAMINO_BODEGUEROS[i][3];
+            int x_final = camino[i][2]-2;
+            int y_final = camino[i][3]-2;
 
             boolean restar_x = false;
             boolean restar_y = false;
@@ -223,9 +227,7 @@ public class Lienzo extends java.awt.Canvas {
                     {
                         x--;
                     }
-                }
-                else
-                {
+                } else {
                     if (x < x_final) //Avanza x
                     {
                         x++;
@@ -237,9 +239,7 @@ public class Lienzo extends java.awt.Canvas {
                     {
                         y--;
                     }
-                }
-                else
-                {
+                } else {
                     if (y < y_final) //Avanza y
                     {
                         y++;
@@ -249,15 +249,19 @@ public class Lienzo extends java.awt.Canvas {
                 rec.setFrame(
                         x,
                         y,
-                        2, 2);
+                        5, 5);
+                this.dibuja_lienzo(strategy.getDrawGraphics());
                 g2.fill(rec);
                 strategy.show();
-                
+
                 //Sale
                 if (x == x_final && y == y_final) {
                     break;
                 }
-                try { Thread.sleep(10); } catch (Exception e) {}
+                try {
+                    Thread.sleep(10);
+                } catch (Exception e) {
+                }
             }
         }
 
