@@ -4,6 +4,8 @@
  */
 package colas;
 
+import com.sun.org.apache.bcel.internal.generic.PUSH;
+
 /**
  *
  * @author edugonch
@@ -84,6 +86,28 @@ public class Configuracion {
         {220, 252, 230, 252},   //Undecima Parte
     };
     //Caminos final hacia cajas
+    public static int CAMINO_FINAL_A_CAJAS1[][] = {
+        {230, 262, 230, 310},
+        {230, 310, 300, 310}
+    };
+    public static int CAMINO_FINAL_A_CAJAS2[][] = {
+        {240, 262, 240, 286},
+        {240, 286, 300, 286}
+    };
+    public static int CAMINO_FINAL_A_CAJAS3[][] = {
+        {250, 262, 300, 262}
+    };
+    public static int CAMINO_FINAL_A_CAJAS4[][] = {
+        {250, 238, 300, 238}
+    };
+    public static int CAMINO_FINAL_A_CAJAS5[][] = {
+        {240, 238, 240, 214},
+        {240, 214, 300, 214}
+    };
+    public static int CAMINO_FINAL_A_CAJAS6[][] = {
+        {230, 238, 230, 190},
+        {230, 190, 300, 190}
+    };
     public static int CAMINO_FINAL_A_CAJAS[][] = {
         {230, 252, 300, 310},   //Camino hacia primera caja
         {230, 252, 300, 286},   //Camino hacia segunda caja
@@ -104,6 +128,28 @@ public class Configuracion {
     };
     
     //Camino desde cajas hacia bodegueros
+    public static int CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS1[][] = {
+        {320, 310, 400, 310},
+        {400, 310, 400, 262}
+    };
+    public static int CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS2[][] = {
+        {320, 286, 390, 286},
+        {390, 286, 390, 262}
+    };
+    public static int CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS3[][] = {
+        {320, 262, 380, 262}
+    };
+    public static int CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS4[][] = {
+        {320, 238, 380, 238}
+    };
+    public static int CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS5[][] = {
+        {320, 214, 390, 214},
+        {390, 214, 390, 238}
+    };
+    public static int CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS6[][] = {
+        {320, 190, 400, 190},
+        {400, 190, 400, 238}
+    };
     public static int CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS[][] = {
         {320, 310, 400, 252},//Dibuja primera parte 
         {320, 286, 400, 252},//Dibuja segunda parte 
@@ -124,26 +170,43 @@ public class Configuracion {
         {450, 370, 470, 370},//Dibuja sexta parte
         {470, 370, 470, 150},//Dibuja sexta parte
         {470, 150, 55, 150},//Dibuja sexta parte
-        {55, 150, 55, 58},//Dibuja sexta parte
-        {55, 58, 70, 58},//Dibuja sexta parte
+        {55, 150, 55, 68},//Dibuja sexta parte
+        {55, 68, 70, 68},//Dibuja sexta parte
     };
     
     //Camino final de cajas
-    public static int CAMINO_FINAL_CAJAS[][] = {
-        {70, 58, 180, 20},//Dibuja primera parte 
-        {70, 58, 180, 44},//Dibuja segunda parte 
-        {70, 58, 180, 68},//Dibuja tercera parte 
-        {70, 58, 180, 92},//Dibuja cuarta parte 
-        {70, 58, 180, 116}//Dibuja quinta parte
+    public static int CAMINO_FINAL_BODEGUEROS_1[][] = 
+    {
+        {70, 58, 70, 20},
+        {70, 20, 180, 20}
+    };
+    public static int CAMINO_FINAL_BODEGUEROS_2[][] = 
+    {
+        {80, 58, 80, 44},
+        {80, 44, 180, 44}
+    };
+    public static int CAMINO_FINAL_BODEGUEROS_3[][] = 
+    {
+        {80, 68, 180, 68}
+    };
+    public static int CAMINO_FINAL_BODEGUEROS_4[][] = 
+    {
+        {80, 78, 80, 92},
+        {80, 92, 180, 92}
+    };
+    public static int CAMINO_FINAL_BODEGUEROS_5[][] = 
+    {
+        {70, 78, 70, 116},
+        {70, 116, 180, 116}
     };
     
     //Despachos de bodegueros
     public static int DESPACHOS[][] = {
-        {180, 106, 20, 20},//Dibuja segundo cajero (x,y,ancho, alto)
-        {180, 82, 20, 20},//Dibuja tercero cajero (x,y,ancho, alto)
-        {180, 58, 20, 20},//Dibuja cuarto cajero (x,y,ancho, alto)
-        {180, 34, 20, 20},//Dibuja quinto cajero (x,y,ancho, alto)
-        {180, 10, 20, 20}//Dibuja sexto cajero (x,y,ancho, alto)
+        {180, 106, 20, 20},//Dibuja segundo bodeguero (x,y,ancho, alto)
+        {180, 82, 20, 20},//Dibuja tercero bodeguero (x,y,ancho, alto)
+        {180, 58, 20, 20},//Dibuja cuarto bodeguero (x,y,ancho, alto)
+        {180, 34, 20, 20},//Dibuja quinto bodeguero (x,y,ancho, alto)
+        {180, 10, 20, 20}//Dibuja sexto bodeguero (x,y,ancho, alto)
     };
     
     //Bodega (contenedor) de pedidos
@@ -151,10 +214,10 @@ public class Configuracion {
     
     //Camino de bodegueros a bodegas
     public static int CAMINO_BODEGUEROS_A_BODEGAS[][] = {
-        {200, 20, 280, 30},//Dibuja primera parte 
-        {200, 44, 280, 54},//Dibuja segunda parte 
-        {200, 68, 280, 78},//Dibuja tercera parte 
-        {200, 92, 280, 102},//Dibuja cuarta parte 
-        {200, 116, 280, 126}//Dibuja quinta parte
+        {200, 20, 280, 20},//Dibuja primera parte 
+        {200, 44, 280, 44},//Dibuja segunda parte 
+        {200, 68, 280, 68},//Dibuja tercera parte 
+        {200, 92, 280, 92},//Dibuja cuarta parte 
+        {200, 116, 280, 116}//Dibuja quinta parte
     };
 }
