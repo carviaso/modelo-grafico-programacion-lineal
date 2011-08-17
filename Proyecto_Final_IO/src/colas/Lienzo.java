@@ -111,13 +111,55 @@ public class Lienzo extends java.awt.Canvas {
                     Configuracion.CAMINO_CAJAS[i][3]));
         }
         //Camino hacia Cajas
-        for (int i = 0; i < Configuracion.CAMINO_FINAL_A_CAJAS.length; i++) {
+        for (int i = 0; i < Configuracion.CAMINO_FINAL_A_CAJAS1.length; i++) {
+            g2.draw(new Line2D.Double(
+                    Configuracion.CAMINO_FINAL_A_CAJAS1[i][0],
+                    Configuracion.CAMINO_FINAL_A_CAJAS1[i][1],
+                    Configuracion.CAMINO_FINAL_A_CAJAS1[i][2],
+                    Configuracion.CAMINO_FINAL_A_CAJAS1[i][3]));
+        }
+        for (int i = 0; i < Configuracion.CAMINO_FINAL_A_CAJAS2.length; i++) {
+            g2.draw(new Line2D.Double(
+                    Configuracion.CAMINO_FINAL_A_CAJAS2[i][0],
+                    Configuracion.CAMINO_FINAL_A_CAJAS2[i][1],
+                    Configuracion.CAMINO_FINAL_A_CAJAS2[i][2],
+                    Configuracion.CAMINO_FINAL_A_CAJAS2[i][3]));
+        }
+        for (int i = 0; i < Configuracion.CAMINO_FINAL_A_CAJAS3.length; i++) {
+            g2.draw(new Line2D.Double(
+                    Configuracion.CAMINO_FINAL_A_CAJAS3[i][0],
+                    Configuracion.CAMINO_FINAL_A_CAJAS3[i][1],
+                    Configuracion.CAMINO_FINAL_A_CAJAS3[i][2],
+                    Configuracion.CAMINO_FINAL_A_CAJAS3[i][3]));
+        }
+        for (int i = 0; i < Configuracion.CAMINO_FINAL_A_CAJAS4.length; i++) {
+            g2.draw(new Line2D.Double(
+                    Configuracion.CAMINO_FINAL_A_CAJAS4[i][0],
+                    Configuracion.CAMINO_FINAL_A_CAJAS4[i][1],
+                    Configuracion.CAMINO_FINAL_A_CAJAS4[i][2],
+                    Configuracion.CAMINO_FINAL_A_CAJAS4[i][3]));
+        }
+        for (int i = 0; i < Configuracion.CAMINO_FINAL_A_CAJAS5.length; i++) {
+            g2.draw(new Line2D.Double(
+                    Configuracion.CAMINO_FINAL_A_CAJAS5[i][0],
+                    Configuracion.CAMINO_FINAL_A_CAJAS5[i][1],
+                    Configuracion.CAMINO_FINAL_A_CAJAS5[i][2],
+                    Configuracion.CAMINO_FINAL_A_CAJAS5[i][3]));
+        }
+        for (int i = 0; i < Configuracion.CAMINO_FINAL_A_CAJAS6.length; i++) {
+            g2.draw(new Line2D.Double(
+                    Configuracion.CAMINO_FINAL_A_CAJAS6[i][0],
+                    Configuracion.CAMINO_FINAL_A_CAJAS6[i][1],
+                    Configuracion.CAMINO_FINAL_A_CAJAS6[i][2],
+                    Configuracion.CAMINO_FINAL_A_CAJAS6[i][3]));
+        }
+        /*for (int i = 0; i < Configuracion.CAMINO_FINAL_A_CAJAS.length; i++) {
             g2.draw(new Line2D.Double(
                     Configuracion.CAMINO_FINAL_A_CAJAS[i][0],
                     Configuracion.CAMINO_FINAL_A_CAJAS[i][1],
                     Configuracion.CAMINO_FINAL_A_CAJAS[i][2],
                     Configuracion.CAMINO_FINAL_A_CAJAS[i][3]));
-        }
+        }*/
 
         //Dibuja a los Cajeros
         g2.setColor(new Color(128, 120, 86));
@@ -131,12 +173,47 @@ public class Lienzo extends java.awt.Canvas {
 
         //Camino Desde Cajas hacia Bodegas
         g2.setColor(Color.BLACK);
-        for (int i = 0; i < Configuracion.CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS.length; i++) {
+        for (int i = 0; i < Configuracion.CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS1.length; i++) {
             g2.draw(new Line2D.Double(
-                    Configuracion.CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS[i][0],
-                    Configuracion.CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS[i][1],
-                    Configuracion.CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS[i][2],
-                    Configuracion.CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS[i][3]));
+                    Configuracion.CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS1[i][0],
+                    Configuracion.CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS1[i][1],
+                    Configuracion.CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS1[i][2],
+                    Configuracion.CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS1[i][3]));
+        }
+        for (int i = 0; i < Configuracion.CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS2.length; i++) {
+            g2.draw(new Line2D.Double(
+                    Configuracion.CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS2[i][0],
+                    Configuracion.CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS2[i][1],
+                    Configuracion.CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS2[i][2],
+                    Configuracion.CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS2[i][3]));
+        }
+        for (int i = 0; i < Configuracion.CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS3.length; i++) {
+            g2.draw(new Line2D.Double(
+                    Configuracion.CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS3[i][0],
+                    Configuracion.CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS3[i][1],
+                    Configuracion.CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS3[i][2],
+                    Configuracion.CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS3[i][3]));
+        }
+        for (int i = 0; i < Configuracion.CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS4.length; i++) {
+            g2.draw(new Line2D.Double(
+                    Configuracion.CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS4[i][0],
+                    Configuracion.CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS4[i][1],
+                    Configuracion.CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS4[i][2],
+                    Configuracion.CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS4[i][3]));
+        }
+        for (int i = 0; i < Configuracion.CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS5.length; i++) {
+            g2.draw(new Line2D.Double(
+                    Configuracion.CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS5[i][0],
+                    Configuracion.CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS5[i][1],
+                    Configuracion.CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS5[i][2],
+                    Configuracion.CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS5[i][3]));
+        }
+        for (int i = 0; i < Configuracion.CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS6.length; i++) {
+            g2.draw(new Line2D.Double(
+                    Configuracion.CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS6[i][0],
+                    Configuracion.CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS6[i][1],
+                    Configuracion.CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS6[i][2],
+                    Configuracion.CAMINO_DESDE_CAJAS_HACIA_BODEGUEROS6[i][3]));
         }
         //Camino Principal
         for (int i = 0; i < Configuracion.CAMINO_BODEGUEROS.length; i++) {
@@ -147,14 +224,50 @@ public class Lienzo extends java.awt.Canvas {
                     Configuracion.CAMINO_BODEGUEROS[i][3]));
         }
 
+        for (int i = 0; i < Configuracion.CAMINO_FINAL_BODEGUEROS_1.length; i++) {
+            g2.draw(new Line2D.Double(
+                    Configuracion.CAMINO_FINAL_BODEGUEROS_1[i][0],
+                    Configuracion.CAMINO_FINAL_BODEGUEROS_1[i][1],
+                    Configuracion.CAMINO_FINAL_BODEGUEROS_1[i][2],
+                    Configuracion.CAMINO_FINAL_BODEGUEROS_1[i][3]));
+        }
+        for (int i = 0; i < Configuracion.CAMINO_FINAL_BODEGUEROS_2.length; i++) {
+            g2.draw(new Line2D.Double(
+                    Configuracion.CAMINO_FINAL_BODEGUEROS_2[i][0],
+                    Configuracion.CAMINO_FINAL_BODEGUEROS_2[i][1],
+                    Configuracion.CAMINO_FINAL_BODEGUEROS_2[i][2],
+                    Configuracion.CAMINO_FINAL_BODEGUEROS_2[i][3]));
+        }
+        for (int i = 0; i < Configuracion.CAMINO_FINAL_BODEGUEROS_3.length; i++) {
+            g2.draw(new Line2D.Double(
+                    Configuracion.CAMINO_FINAL_BODEGUEROS_3[i][0],
+                    Configuracion.CAMINO_FINAL_BODEGUEROS_3[i][1],
+                    Configuracion.CAMINO_FINAL_BODEGUEROS_3[i][2],
+                    Configuracion.CAMINO_FINAL_BODEGUEROS_3[i][3]));
+        }
+        for (int i = 0; i < Configuracion.CAMINO_FINAL_BODEGUEROS_4.length; i++) {
+            g2.draw(new Line2D.Double(
+                    Configuracion.CAMINO_FINAL_BODEGUEROS_4[i][0],
+                    Configuracion.CAMINO_FINAL_BODEGUEROS_4[i][1],
+                    Configuracion.CAMINO_FINAL_BODEGUEROS_4[i][2],
+                    Configuracion.CAMINO_FINAL_BODEGUEROS_4[i][3]));
+        }
+        for (int i = 0; i < Configuracion.CAMINO_FINAL_BODEGUEROS_5.length; i++) {
+            g2.draw(new Line2D.Double(
+                    Configuracion.CAMINO_FINAL_BODEGUEROS_5[i][0],
+                    Configuracion.CAMINO_FINAL_BODEGUEROS_5[i][1],
+                    Configuracion.CAMINO_FINAL_BODEGUEROS_5[i][2],
+                    Configuracion.CAMINO_FINAL_BODEGUEROS_5[i][3]));
+        }
         //Camino Final
-        for (int i = 0; i < Configuracion.CAMINO_FINAL_CAJAS.length; i++) {
+        /*for (int i = 0; i < Configuracion.CAMINO_FINAL_BODEGUEROS.length; i++) {
+            for(int j = 0 < Configuracion.CAMINO_FINAL_CAJAS[i][0])
             g2.draw(new Line2D.Double(
                     Configuracion.CAMINO_FINAL_CAJAS[i][0],
                     Configuracion.CAMINO_FINAL_CAJAS[i][1],
                     Configuracion.CAMINO_FINAL_CAJAS[i][2],
                     Configuracion.CAMINO_FINAL_CAJAS[i][3]));
-        }
+        }*/
 
         //Dibuja a los Despachos
         g2.setColor(Color.RED);
