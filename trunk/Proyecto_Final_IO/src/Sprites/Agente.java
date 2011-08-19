@@ -11,6 +11,7 @@ import java.awt.*;
  * @author edugonch
  */
 public class Agente extends Entidad {
+    private boolean activado = false;
     
     @Override
     public void paint()
@@ -26,5 +27,19 @@ public class Agente extends Entidad {
                     this.getCoordenadas()[i][2],
                     this.getCoordenadas()[i][3]);
         }
+    }
+
+    /**
+     * @return the activado
+     */
+    public boolean isActivado() {
+        return activado;
+    }
+
+    /**
+     * @param activado the activado to set
+     */
+    public void setActivado(boolean activado) {
+        this.activado = activado;
     }
 }
