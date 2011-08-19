@@ -6,7 +6,6 @@ package Sprites;
 
 import Colas.*;
 import Colas.Factory.*;
-import com.sun.xml.internal.bind.v2.util.FatalAdapter;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.geom.*;
@@ -14,6 +13,8 @@ import javax.swing.*;
 import java.awt.image.BufferStrategy;
 import proyecto_final_io.Configuracion;
 import java.awt.image.BufferStrategy;
+import javax.swing.AbstractAction.*;
+import proyecto_final_io.PanelOpciones;
 /*
 Los delegados de comunicación y las variables globales de la aplicacion
  */
@@ -25,7 +26,6 @@ Los delegados de comunicación y las variables globales de la aplicacion
 public class ApplicationController extends Canvas {
 
     private Fact fact = new Fact();
-    private java.util.ArrayList<Camino> array_caminos = new java.util.ArrayList<Camino>();
     /* ==================== CONTROLADORES DE CAMINOS ===========================*/
     public BaseController controladorCaminoPrincipal = fact.getFactory(Factories.CAMINO_PRINCIPAL);
     public BaseController controladorCaminoHaciaVendedores = fact.getFactory(Factories.CAMINO_HACIA_VENDEDORES);
@@ -73,8 +73,8 @@ public class ApplicationController extends Canvas {
         /*Pintar Caminos*/
         dibuja_lienzo(tg);
         PintarCaminos();
-        ((Graphics2D)tg).dispose();
-	strategy.show();
+        ((Graphics2D) tg).dispose();
+        strategy.show();
     }
 
     public void PintarCaminos() {
@@ -199,23 +199,35 @@ public class ApplicationController extends Canvas {
         }
     }
 
+    private void creaForm(JPanel panel) {
+        // Create a button on the canvas
+        
+        
+        /*Panel para los vendedores*/
+        
+        /******************************/
+       
+         panel.add(new PanelOpciones());
 
+    }
     //################################################
     //#                SINGLETON                     #
     //################################################
+
     private ApplicationController() {
         JFrame container = new JFrame("Proyecto Final de IO");
 
         // get hold the content of the frame and set up the resolution of the game
 
         JPanel panel = (JPanel) container.getContentPane();
-        panel.setPreferredSize(new Dimension(800, 800));
-        panel.setLayout(null);
+        panel.setPreferredSize(new Dimension(1050, 600));
+        panel.setLayout(new GridBagLayout());
 
         // setup our canvas size and put it into the content of the frame
 
-        setBounds(0, 0, 800, 800);
+        setBounds(0, 0, 530, 600);
         panel.add(this);
+        creaForm(panel);
 
         // Tell AWT not to bother repainting our canvas since we're
 
@@ -235,7 +247,7 @@ public class ApplicationController extends Canvas {
         createBufferStrategy(2);
         this.strategy = getBufferStrategy();
         tg = strategy.getDrawGraphics();
-        
+
         //#################################################
         //# Inicializa coordenadas y colores para caminos #
         //#################################################
