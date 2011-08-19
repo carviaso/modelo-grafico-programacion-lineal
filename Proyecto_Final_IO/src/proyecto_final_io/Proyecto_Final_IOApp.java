@@ -16,7 +16,7 @@ public class Proyecto_Final_IOApp extends SingleFrameApplication {
      * At startup create and show the main frame of the application.
      */
     @Override protected void startup() {
-        show(new Proyecto_Final_IOView(this));
+        //show(new Proyecto_Final_IOView(this));
     }
 
     /**
@@ -39,6 +39,6 @@ public class Proyecto_Final_IOApp extends SingleFrameApplication {
      * Main method launching the application.
      */
     public static void main(String[] args) {
-        launch(Proyecto_Final_IOApp.class, args);
+        Sprites.ApplicationController.getInstance();
     }
 }

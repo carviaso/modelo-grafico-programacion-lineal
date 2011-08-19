@@ -25,9 +25,7 @@ public class Proyecto_Final_IOView extends FrameView {
         super(app);
 
         initComponents();
-        
-        lienzo = new colas.Lienzo();
-        this.PanelDeDibujo.add(lienzo, java.awt.BorderLayout.CENTER); 
+        this.PanelDeDibujo.add(Sprites.ApplicationController.getInstance(), java.awt.BorderLayout.CENTER); 
   
         // status bar initialization - message timeout, idle icon and busy animation, etc
         ResourceMap resourceMap = getResourceMap();
@@ -82,6 +80,7 @@ public class Proyecto_Final_IOView extends FrameView {
                 }
             }
         });
+        
     }
 
     @Action
@@ -218,7 +217,7 @@ public class Proyecto_Final_IOView extends FrameView {
     }//GEN-LAST:event_jMenuItem1MouseClicked
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        this.lienzo.sigueCamino(colas.Configuracion.CAMINO_FINAL_A_VENDEDORES);
+       
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -237,7 +236,9 @@ public class Proyecto_Final_IOView extends FrameView {
     private final Icon idleIcon;
     private final Icon[] busyIcons = new Icon[15];
     private int busyIconIndex = 0;
-    private colas.Lienzo lienzo = null;
+    private Sprites.Lienzo lienzo = null;
 
     private JDialog aboutBox;
+    private Sprites.ApplicationController controlador;
+    Sprites.Lienzo lz;
 }
