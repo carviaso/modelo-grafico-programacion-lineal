@@ -1,0 +1,1 @@
+El proyecto pretende simular una cola de transporte en programación lineal
